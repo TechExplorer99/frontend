@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3001/api';
+const API_URL = 'https://backend-techexplorer99s-projects.vercel.app/api';
 
 // Проверка соединения с backend
 export const checkBackend = async () => {
