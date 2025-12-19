@@ -1,0 +1,250 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background:
+    radial-gradient(circle at top left, #e8f1ff 0, transparent 55%),
+    radial-gradient(circle at bottom right, #d9f2ff 0, transparent 55%),
+    linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
+}
+
+/* Контейнер формы */
+.register-container {
+  max-width: 450px;
+  width: 100%;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.6s ease-out;
+  backdrop-filter: blur(5px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Заголовок */
+.register-container h2 {
+  text-align: center;
+  color: #202124;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+/* Форма */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #5f6368;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #202124;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+.form-group input:disabled {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+}
+
+/* Кнопка регистрации */
+.register-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #34a853 0%, #2e8b57 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.register-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2e8b57 0%, #267349 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
+}
+
+.register-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.register-button:disabled {
+  background: #5f6368;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Ошибка */
+.error-message {
+  background: rgba(252, 232, 230, 0.9);
+  color: #c5221f;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid rgba(245, 198, 203, 0.8);
+  animation: shake 0.5s ease-in-out;
+  backdrop-filter: blur(5px);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Ссылки */
+.links {
+  margin-top: 24px;
+  text-align: center;
+  color: #5f6368;
+  font-size: 14px;
+}
+
+.links a {
+  color: #1a73e8;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+  font-weight: 500;
+}
+
+.links a:hover {
+  color: #0d62d9;
+  text-decoration: underline;
+}
+
+/* Требования */
+.requirements {
+  background: rgba(248, 249, 250, 0.9);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 24px;
+  border-left: 4px solid #34a853;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(218, 220, 224, 0.3);
+}
+
+.requirements h4 {
+  margin: 0 0 12px 0;
+  font-weight: 500;
+  color: #202124;
+  font-size: 14px;
+}
+
+.requirements ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.requirements li {
+  margin: 6px 0;
+  color: #5f6368;
+  font-size: 13px;
+}
+
+/* Подвал формы регистрации */
+.register-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #5f6368;
+}
+
+.register-login-button {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #1a73e8;
+  background: #ffffff;
+  color: #1a73e8;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.register-login-button:hover {
+  background: #e8f0fe;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .register-page {
+    padding: 16px;
+  }
+  
+  .register-container {
+    padding: 30px;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .register-container h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 24px;
+  }
+  
+  .register-container h2 {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  
+  .requirements {
+    font-size: 13px;
+    padding: 14px;
+  }
+  
+  .requirements ul {
+    padding-left: 16px;
+  }
+}
